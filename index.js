@@ -7,6 +7,7 @@ const socketRouter = require("./routes/socketRouter")(io).router;
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.use("/api/v1", socketRouter);
 
