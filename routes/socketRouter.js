@@ -10,7 +10,7 @@ function socketRouter(io) {
 
     router.post("/emitlog", (req, res) => {
       console.log(req.body);
-      // io.emit("chat", req.body);
+      io.emit("chat", req.body);
       res.send("test");
     });
   };
